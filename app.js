@@ -6,7 +6,7 @@ const cors = require("cors");
 const app = express();
 
 //! cors
-app.use(cors({ origin: true }));
+app.use(cors({ origin: "http://localhost:5173/" }));
 
 const apiLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, //! 15 minutes
