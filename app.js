@@ -8,7 +8,7 @@ const app = express();
 //! cors
 app.use(
   cors({
-    origin: "http://localhost:5173", // Allow only your frontend's origin
+    origin: "https://globalcurrencyconverterfrontend-1.onrender.com", // Allow only your frontend's origin
     methods: ["GET", "POST"], // Specify allowed HTTP methods
     credentials: true, // Allow cookies if needed
   })
