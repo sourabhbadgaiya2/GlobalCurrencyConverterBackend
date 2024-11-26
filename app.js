@@ -6,10 +6,13 @@ const cors = require("cors");
 const app = express();
 
 //! cors
-const coreOptions = {
-  origin: ["http://localhost:5173/"],
-};
-app.use(cors(coreOptions));
+app.use(
+  cors({
+    origin: "http://localhost:5173", // Allow only your frontend's origin
+    methods: ["GET", "POST"], // Specify allowed HTTP methods
+    credentials: true, // Allow cookies if needed
+  })
+);
 
 const apiLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, //! 15 minutes
