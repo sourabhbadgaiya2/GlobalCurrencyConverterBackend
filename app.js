@@ -55,7 +55,8 @@ app.post("/api/convert", async (req, res) => {
   }
 });
 const PORT = process.env.PORT || 3000; // Use Render's environment variable for the port
+const HOST = "0.0.0.0"; // Bind to all network interfaces
 
-app.listen(PORT, () => {
-  console.log(`Server running on :${PORT}`);
+app.listen(PORT, HOST, () => {
+  console.log(`Server running on http://${HOST}:${PORT}`);
 });
